@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Review</title>
+ 
+
+<style>
+h1 {text-align: center; color:#00ff88;}
+p {text-align: center;}
+div {text-align: center;}
+bodt {background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_2_5x/sources/r1/cms/prod/7460/627460-h);}
+</style>
+</head>
+
+<body bgcolor="#107369" >
+ <div>
+	<h1>Bell Bottom Movie Review </h1>
+	<br>
+	<pre>
+	Bell Bottom is a 2021 Indian Hindi-language action thriller film directed by Ranjit M Tewari.
+	
+	It stars Akshay Kumar as the lead character, with Lara Dutta, Vaani Kapoor and Huma Qureshi in other prominent roles.
+	
+	ell Bottom is inspired from real life hijacking events in India by Khalistani separatists during the 1980s, such as the Indian Airlines Flight 423, 405 and 421 hijackings.
+	</pre>
+	<br>
+    <img src="https://m.media-amazon.com/images/M/MV5BNjZjNTU2MTQtNGQ5YS00YjQ1LTgwZTctYWNjMGRjMzhkMmVhXkEyXkFqcGdeQXVyMTI1NDEyNTM5._V1_FMjpg_UX1000_.jpg" width="200" height="300">
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('y_predict')}}"method="post">
+
+    Enter Review:
+
+    <input type="text" name="review"  required="required" />
+    <br>
+
+    <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+    
+    </form>
+
+  
+   
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
+

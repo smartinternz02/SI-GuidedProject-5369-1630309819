@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Text Generation Page</title>
+ 
+
+<style>
+h1 {text-align: center; color:#00ff88;}
+p {text-align: center;}
+div {text-align: center;}
+body {
+  background-image: url('https://previews.123rf.com/images/photostok/photostok1202/photostok120200014/12290891-old-paper-background-with-space-for-text.jpg');
+}
+</style>
+</head>
+
+<body>
+ <div>
+	<h1>
+  <p style="background;color:black;">TEXT SUMMARIZATION
+</h1>
+
+<form class="login" action="{{ url_for('back')}}">
+
+  <button>Home Page</button>
+</form>
+
+
+<form class="login" action="{{ url_for('predict')}}" method="post">
+  <input type="text" placeholder="TEXT" name="message">
+
+  <button>Predict</button>
+</form>
+
+
+  {{ p_text }}
+  
+   
+
+ </div>
+
+
+</body>
+</html>
+

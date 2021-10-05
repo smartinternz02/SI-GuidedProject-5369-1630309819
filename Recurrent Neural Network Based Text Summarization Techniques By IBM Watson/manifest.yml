@@ -1,0 +1,9 @@
+---
+applications:
+
+ - name: Python Flask App AYLKV 2021-09-09
+   random-route: true
+   memory: 1.5G
+   disk_quota: 2G
+   buildpack: 'https://github.com/cloudfoundry/python-buildpack.git'
+   command: python textapp.py
